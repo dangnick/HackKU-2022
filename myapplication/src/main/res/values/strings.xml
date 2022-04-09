@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Wardrobe</string>
+    <string name="outfits">Outfits</string>
+    <string name="favorites">Favorites</string>
+    <string name="create">Create</string>
+    <string name="hats">Hats</string>
+    <string name="tops">Tops</string>
+    <string name="pants">Pants</string>
+    <string name="shoes">Shoes</string>
+    <string name="clothes">Clothes</string>
+    <string name="all">All</string>
+</resources>

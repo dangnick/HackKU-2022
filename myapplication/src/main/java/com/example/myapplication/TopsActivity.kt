@@ -5,12 +5,18 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.content.Intent
 import android.widget.GridLayout
+import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 
 class TopsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tops)
-
+        val storageReference = Firebase.storage.reference
+        val imageView = findViewById<ImageView>(R.id.download)
+        Glide.with(this).load(storageReference).into(imageView)
         val grid_Tops = findViewById(R.id.topGrid) as GridLayout
         var count = 0
 

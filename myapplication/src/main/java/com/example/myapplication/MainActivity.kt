@@ -14,15 +14,14 @@ class MainActivity : AppCompatActivity() {
         val button2 = findViewById<Button>(R.id.button_create)
         val button3 = findViewById<Button>(R.id.button3)
 
-
         button.setOnClickListener{
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
 
         button2.setOnClickListener{
-            val intent2 = Intent(this, CreateActivity::class.java)
-            startActivity(intent2)
+            val intent = Intent(this, CreateActivity::class.java)
+            startActivity(intent)
         }
 
 

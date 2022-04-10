@@ -9,10 +9,12 @@
     <string name="shoes">Shoes</string>
     <string name="clothes">Clothes</string>
     <string name="all">All</string>
-    <string name="title_activity_all_outfits">AllOutfits</string>
+    <string name="title_activity_all_outfits">All Outfits</string>
     <string name="blueshirt">Blue T-Shirt</string>
     <string name="Khakipants">Khaki Pants</string>
     <string name="Jordans">Jordans</string>
+    <string name="plus">+</string>
+    <string name="wait">...</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

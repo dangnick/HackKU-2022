@@ -6,6 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@android:color/holo_blue_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.019" />
+
     <TextView
         android:id="@+id/textView_Outfits"
         android:layout_width="wrap_content"
@@ -18,31 +45,31 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/button_create"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:text="+"
+        android:text="@string/plus"
         android:textAlignment="center"
-        android:textSize="48dp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.229" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:backgroundTint="#F44336"
-        android:text="Hats"
+        android:text="@string/hats"
         android:textSize="18sp"
         app:iconTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +84,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:backgroundTint="#3F51B5"
-        android:text="TOPS"
+        android:text="@string/tops"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +99,7 @@
         android:layout_height="120dp"
         android:backgroundTint="#FFC107"
         android:singleLine="true"
-        android:text="Pants"
+        android:text="@string/pants"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +113,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:backgroundTint="#4CAF50"
-        android:text="Shoes"
+        android:text="@string/shoes"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -113,14 +140,14 @@
         android:id="@+id/button_all"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:text="..."
+        android:text="@string/wait"
         android:textSize="24sp"
         app:iconPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.786"
+        app:layout_constraintHorizontal_bias="0.787"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.228" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

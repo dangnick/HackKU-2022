@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -10,7 +11,9 @@ import android.provider.Settings
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import coil.load
 import com.example.myapplication.databinding.ActivityCameraBinding
+import com.google.firebase.storage.FirebaseStorage
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -21,6 +24,7 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.karumi.dexter.listener.single.PermissionListener
 import kotlinx.android.synthetic.main.activity_camera.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.ByteArrayOutputStream
 
 class CameraActivity : AppCompatActivity() {
 
@@ -133,38 +137,24 @@ class CameraActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK) {
             when (requestCode) {
                 CAMERA_REQUEST_CODE -> {
-                    imgProfile.setImageURI(data!!.data)
-                    FirebaseStorageActivity().uploadImage(this,data.data!!)
-
-                    /*
-                    * Creating a Storage Reference from the App - Adam
-                    */
-
-                    /*
-                    val storageRef = storage.reference
-
-                    val cameraRef = storageRef.child()
-
-                     */
-
-
-
-
-                    /*
-                     * Uploading from Data in Memory - Adam
-
                     val bitmap = data?.extras?.get("data") as Bitmap
+                    binding.imgProfile.load(bitmap)
                     val baos = ByteArrayOutputStream() //Adam
                     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos) //Adam
                     val data = baos.toByteArray() //Adam
+                    //Adam
+//FirebaseStorageManager().uploadImage(this,data.data!!)
+                    val mStorageRef = FirebaseStorage.getInstance().reference
 
-                    var uploadTask = .putBytes(data) //Adam
-
-
-
-                    //we are using coroutine image loader (coil)
-                    binding.imgProfile.load(bitmap)
-*/
+                    val imageFileName = "users/profilePic${System.currentTimeMillis()}.png"
+                    val mountainImagesRef = mStorageRef.child(imageFileName)
+                    var uploadTask = mountainImagesRef.putBytes(data);
+                    uploadTask.addOnFailureListener {
+                        // Handle unsuccessful uploads
+                    }.addOnSuccessListener { taskSnapshot ->
+                        // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
+                        // ...
+                    }
                 }
                 GALLERY_REQUEST_CODE -> {
                     imgProfile.setImageURI(data!!.data)

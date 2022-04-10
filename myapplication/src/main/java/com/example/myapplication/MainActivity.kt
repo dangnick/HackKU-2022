@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         button6.setOnClickListener{
-            val intent6 = Intent(this, PantsActivity::class.java)
+            val intent6 = Intent(this, ShoesActivity::class.java)
             startActivity(intent6)
         }
     }

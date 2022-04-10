@@ -23,6 +23,54 @@
             android:gravity="center"
             android:orientation="vertical"
             android:rowOrderPreserved="true">
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="0"
+                android:layout_margin="5dp"
+                android:contentDescription="yes"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shirt1" />
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="5dp"
+                android:contentDescription="yes"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shirt2" />
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="0"
+                android:layout_margin="5dp"
+                android:contentDescription="yes"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shirt3" />
+
+            <ImageButton
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="0"
+                android:layout_margin="5dp"
+                android:contentDescription="yes"
+                android:scaleType="fitCenter"
+                android:src="@drawable/shirt4" />
         </GridLayout>
 
     </androidx.core.widget.NestedScrollView>

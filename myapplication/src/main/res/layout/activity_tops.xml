@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <GridLayout
+            android:id="@+id/topGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:rowOrderPreserved="true">
+        </GridLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:text="Tops"
+        android:textColor="@color/black"
+        android:textSize="42dp" />
+
+    <ImageButton
+        android:id="@+id/addItem"
+        android:layout_width="67dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="340dp"
+        android:background="#00FFFFFF"
+        android:scaleX="1.4"
+        android:scaleY="1.4"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="#000000" />
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleX="1.2"
+        android:scaleY="1.1"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        app:tint="#000000" />
+
+</RelativeLayout>

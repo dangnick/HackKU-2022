@@ -10,6 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Drippy">
         <activity
+            android:name=".ShoesActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".PantsActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TopsActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HatActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".CreateActivity"
             android:exported="true"
             android:parentActivityName=".MainActivity" />

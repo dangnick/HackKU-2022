@@ -11,11 +11,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.button_all)
+        val button2 = findViewById<Button>(R.id.button_create)
 
         button.setOnClickListener{
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+
+        button2.setOnClickListener{
+            val intent2 = Intent(this, CreateActivity::class.java)
+            startActivity(intent2)
+        }
+
+
     }
 
 

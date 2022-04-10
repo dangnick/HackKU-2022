@@ -14,7 +14,7 @@ class HatActivity : AppCompatActivity() {
         val grid_hats = findViewById(R.id.hatGrid) as GridLayout
         var count = 0
 
-        for(x in 0..10){
+        for(x in 0..3){
             val newHat = ImageButton(this)
             if(x%2 == 0){
                 newHat.layoutParams= GridLayout.LayoutParams(GridLayout.spec(count,1F), GridLayout.spec(0,1F))

@@ -17,7 +17,8 @@
             tools:ignore="Instantiatable" />
         <activity
             android:name=".CameraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".TopsActivity"/>
         <activity
             android:name=".ShoesActivity"
             android:exported="true"

@@ -14,7 +14,7 @@ class TopsActivity : AppCompatActivity() {
         val grid_Tops = findViewById(R.id.topGrid) as GridLayout
         var count = 0
 
-        for(x in 0..10){
+        for(x in 0..3){
             val newTop = ImageButton(this)
             if(x%2 == 0){
                 newTop.layoutParams= GridLayout.LayoutParams(GridLayout.spec(count,1F), GridLayout.spec(0,1F))
@@ -43,7 +43,7 @@ class TopsActivity : AppCompatActivity() {
         }
         val addItem = findViewById<ImageButton>(R.id.addItem)
         addItem.setOnClickListener{
-            val Intent = Intent(this,MainActivity::class.java)
+            val Intent = Intent(this,CameraActivity::class.java)
             startActivity(Intent)
         }
 

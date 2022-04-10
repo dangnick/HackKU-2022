@@ -14,7 +14,7 @@ class ShoesActivity : AppCompatActivity() {
         val grid_Shoes = findViewById(R.id.ShoesGrid) as GridLayout
         var count = 0
 
-        for(x in 0..10){
+        for(x in 0..14){
             val newShoes = ImageButton(this)
             if(x%2 == 0){
                 newShoes.layoutParams= GridLayout.LayoutParams(GridLayout.spec(count,1F), GridLayout.spec(0,1F))

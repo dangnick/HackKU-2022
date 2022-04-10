@@ -14,7 +14,7 @@ class PantsActivity : AppCompatActivity() {
         val grid_pants = findViewById(R.id.pantsGrid) as GridLayout
         var count = 0
 
-        for(x in 0..10){
+        for(x in 0..3){
             val newPants = ImageButton(this)
             if(x%2 == 0){
                 newPants.layoutParams= GridLayout.LayoutParams(GridLayout.spec(count,1F), GridLayout.spec(0,1F))
